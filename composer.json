@@ -1,0 +1,44 @@
+{
+    "name": "laramate/nucid-architecture",
+    "description": "The Nucid Architecture for Laravel",
+    "license": "MIT",
+    "type": "package",
+    "authors": [
+        {
+            "name": "Laramate",
+            "email": "coding@laramate.de",
+            "homepage": "https://www.laramate.de/",
+            "role": "Team"
+        },
+        {
+            "name": "Tobi Kivelip",
+            "email": "tkivelip@gmail.com",
+            "homepage": "https://www.laramate.de/",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.2",
+        "laravel/framework": "5.6.*|5.7.*|5.8.*|6.*",
+        "laramate/composite": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laramate\\Nucid\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Laramate\\Nucid\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laramate\\Nucid\\Providers\\NucidProvider"
+            ]
+        }
+    }
+}
