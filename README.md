@@ -13,14 +13,17 @@ The Nucid Architecture for Laravel
 
 Description
 -------------------------------------------------------------------------------
-The Nucid Architecture for Laravel
+The Nucid Architecture for Laravel is a software architecture for structuring
+a Laravel application based on services. 
 
-Application structure:
-- Domains
-- Services
-- Features
-- Jobs
-- Operations
+This project is inspired by [The Lucid Architecture](https://github.com/lucid-architecture/laravel)
+developed by [Abed Halawi](https://tech.vinelab.com/@mulkave).
+
+We made some adjustments to the core concepts and wrote a new package-based
+implementation with a lot of new features. 
+
+The documentation is still in progess... sorry :)
+
 
 Documentation
 -------------------------------------------------------------------------------
@@ -29,16 +32,16 @@ Documentation
 You can install the package via composer.
 
 ```bash
-composer require laramate/nucid
+composer require laramate/nucid-architecture
 ```
 
 After the composer installation you can customize paths in the [Nucid configuration](#configuration).
 
 After you finished configuration, use the Nucid Artisan command to setup required 
-directories and files.
+directories and files. This will not override any existing files and folders.
 
 ```
- php artisan nucid:create-filesystem
+ php artisan nucid:install
 ```
 
 At least, you should remove the laravel route service provider from the 
