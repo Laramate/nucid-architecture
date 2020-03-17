@@ -1,7 +1,12 @@
 The Nucid Architecture for Laravel
 ===============================================================================
 * [Description](#description)
-* [Documentation](#documentation)
+* [Nucid Architecture](#nucid-architecture)
+  * [Services](#services)
+  * [Features](#features)
+  * [Domains](#domains)
+  * [Jobs and operations](#jobs-and-operations)
+* [Nucid Implementation](#nucid-implementation)
   * [Installation](#installation)
   * [Setting up Services](#setting-up-services)
   * [Configuration](#configuration)
@@ -14,18 +19,61 @@ The Nucid Architecture for Laravel
 Description
 -------------------------------------------------------------------------------
 The Nucid Architecture for Laravel is a software architecture for structuring
-a Laravel application based on services. 
+a Laravel application based on services. Nucid supports you to build large
+scale applications and keep them maintainable. In comparison to other approaches,
+it keeps the Laravel concepts as they are, flexible and customizable.
+
 
 This project is inspired by [The Lucid Architecture](https://github.com/lucid-architecture/laravel)
-developed by [Abed Halawi](https://tech.vinelab.com/@mulkave).
-
-We made some adjustments to the core concepts and wrote a new package-based
-implementation with a lot of new features. 
+developed by [Abed Halawi](https://tech.vinelab.com/@mulkave). We made some adjustments to the core 
+concepts and wrote a new package-based implementation with a lot of new features. 
 
 The documentation is still in progess... sorry :)
 
 
-Documentation
+Nucid Architecture
+-------------------------------------------------------------------------------
+The main goal of the Nucid Architecture for Laravel is to give you and your team
+and application structure which is high scalable, easy maintainable and prevents 
+redundancies.  
+
+### Services
+Modern webapplications have to do a lot more tasks than just displaying frontend 
+websites. They have to deliver content in different formats, need a backend to 
+get administrated and offering APIs to communicate with other solutions. Instead
+of doing all these things anywhere in your project, we seperate them into different
+parts. Thats what we call a service in Nucid. It consists of features.
+
+### Features
+A feature do not implement any concrete logic, it controls which jobs and operations
+will be dispatched to solve the requested tasks for the current service. 
+
+> Note that jobs, operations and features are provided in the seperate package
+> [Laramate/composite](https://github.com/Laramate/composite). This allows you
+> to reuse them in other projects no matter if they are using the Nucid 
+> Architecture or not.  
+
+### Domains
+As in many architecture concepts, the domains implement the business logic. A domain
+is a thematically group of concrete implementions and can consist of models, value objects,
+factories, utility classes etc. It offers jobs and operations that can be called from the
+features. 
+
+Nucid does not define more conventions for the structure of the domains. There are a lot
+concepts for that and most of them are good solutions and there is no reason to force a
+common structure. Quite the contrary: It can be usefull to adjust it to your project size 
+and needings.   
+
+### Jobs and operations
+work in progress
+
+> Note that jobs and operations are implementing Laravel's queuing and serializing
+> Trait. So you can do all the things which you know from the Laravel jobs.
+
+
+
+
+Nucid Implementation
 -------------------------------------------------------------------------------
 
 ### Installation
