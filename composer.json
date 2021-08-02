@@ -22,7 +22,7 @@
     "require": {
         "php": "^7.3|^8.0",
         "laravel/framework": "7.*|8.*",
-        "laramate/composite": "*"
+        "laramate/composite": "^2.0"
     },
     "require-dev": {
         "mockery/mockery": "^1.0",
@@ -44,11 +44,5 @@
                 "Laramate\\Nucid\\Providers\\NucidProvider"
             ]
         }
-    },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../Laramate/*"
-        }
-    ]
+    }
 }
