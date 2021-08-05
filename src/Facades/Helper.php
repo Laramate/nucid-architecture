@@ -2,7 +2,7 @@
 
 namespace Laramate\Nucid\Facades;
 
-use Laramate\FacadeMapper\Facades\Facade;
+use Laramate\Composite\Support\FacadeMapper\Facades\Facade;
 
 class Helper extends Facade
 {
